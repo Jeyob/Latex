@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{times}
+\usepackage{amsmath}
+
+% <http://psl.cs.columbia.edu/phdczar/proposal.html>:
+%
+% The standard departmental thesis proposal format is the following:
+%        30 pages
+%        12 point type
+%        1 inch margins all around = 6.5   inch column
+%        (Total:  30 * 6.5   = 195 page-inches)
+%
+% For letter-size paper: 8.5 in x 11 in
+% Latex Origin is 1''/1'', so measurements are relative to this.
+
+\topmargin      0.0in
+\headheight     0.0in
+\headsep        0.0in
+\oddsidemargin  0.0in
+\evensidemargin 0.0in
+\textheight     9.0in
+\textwidth      6.5in
+
+\title{{\bf Master Data and SOA in a distributed organisation} \\
+\it Thesis proposal}
+\author{ {\bf Jonas Eyob}  \\
+Department of Computer Science \\
+Royal Institute of Technology \\
+{\small jeyob@kth.se}
+}
+\date{\today}
+
+\begin{document}
+\pagestyle{plain}
+\pagenumbering{roman}
+\maketitle
+
+
+\pagebreak
+
+\cleardoublepage
+\pagenumbering{arabic}
+
+\section{Introduction}
+\label{ch:intro}
+
+In today’s rapidly changing and fast paced business environment enterprise agility has become an increasingly important factor. To achieve this, enterprises implement and maintain information systems that will make them agile enough to take part in emerging business opportunities and/or help them facilitate changing business requirement. Maintaining key organisational data has always been an important, e.g., knowing who the customers and suppliers are and which projects they are involved in are essential to be able to strengthen the customer relationship or rationalise decisions affecting the organisation, just to name a few. A commonly used term in this context is master data. Several criteria and guidelines for deciding what characterises master data exists, but in a general sense master data encompass data that more or less defines the enterprises i.e., those data that are critical to the organisation such as projects, customers, suppliers, products etc. Thus, its not hard to understand why master data is the most valuable data the organisation owns, and the subject for many acquisitions.  
+
+Having a consistent and enterprise-wide understanding of what defines, for example, a customer or a project is essential as this both helps prevent bad things from happening - such as customers receiving bills from the different business units instead of a consolidated bill that both saves the issuing company money and improves customer satisfaction - and to seize beneficial business opportunities by analysing the customers involved in the projects and with that anticipating latent needs of the customer.
+
+In many organisations today, however, it is the case that master data resides in a number of overlapping systems across the enterprise. This quickly becomes cumbersome as increasing complexity (due to change, growth, mergers \& acquisitions or technology transformations)  has made it hard for enterprises maintain consistent master data across the enterprise.
+
+\subsection{NCC}
+\label{ch:NCC}
+
+NCC is one of the leading construction and property development companies in the Nordic region with offices located in Sweden, Norway, Finland, Russia and Denmark. The NCC group had sales worth of SEK 57 Billion in 2013, with approximately 18 000 employees. Recent initiatives by NCC group includes the establishment of an group IT function on corporate level to enforce a more holistic and unified view of how IT supports the enterprise. Each subsidiary NCC office around the Nordic region had up until recently had their own, more or less independently run, IT function which have led to locally optimal IT solution architectures with the drawbacks of having inconsistent definition master data across the different business units. For example, NCC which is a company highly centred around projects do not have a enterprise-wide understanding of what constitutes a project. 
+
+\subsection{Problem formulation}
+\label{ch:problemformulation}
+
+With the absence of enterprise-wide set-up to handle master data at NCC this has led to an inconsistent definition of what, for example, constitutes a project or even which customers are shared across the various business units. Imagine, if a large customer of NCC would be in business with several of NCC’s business units, this is indeed an important customer which should be treated so accordingly. However, since business lack the necessary mechanisms to realise this, this customer is likely to be viewed as a small customer. Not only can this lead to missed business opportunities but also the chance of permanently losing an important customer. 
+
+Consequently, the aim of this master thesis project is to look at how to best approach the problem of establishing a master data management solution at NCC. Furthermore, as the NCC group is a fairly decentralized organisation, with its master data residing in different subsidiary organisations and with a organisational structure likely to remain we need to investigate how we, despite this fact, can establish a master data management solution that addresses aspects such as data inconsistency and quality. 
+
+Moreover, we will also look at how we can assist access to master data through services using a service-oriented architecture (SOA) approach.
+
+\subsection{Delimitations}
+\label{ch:delimitations}
+Due to the limited time frame for this project we will solely focus on a subset of master data - project data. Nevertheless, we believe that the learning outcomes from this project will greatly be of assistance stretching this work to remaining master data.
+
+
+\section{Methodology}
+\label{ch:proposal}
+
+Conceptually this project can be divided up into three parts \emph{theory, current state analysis, future state analysis and implementation roadmap}. 
+
+\subsection{Current state analysis}
+\label{ch:plan}
+One of the very first things that we need to address for this project is to concretisise the scope of the analysis. For example, there are many dimensions, with respect to master data management architecture, that must first be agreed upon as they may greatly impact the project delivery. In short, this means understanding the areas to focus our analysis around; some of these include, but are not limited to, data quality, access rights/security, data accuracy, data synchronization, timeliness, interoperability and governance (both SOA and data). Perhaps the primary objective of this project is to compare different possible technical architectures and evaluate them based on one or several of the aforementioned attributes. 
+
+Another important part during this phase will be to gather and build the necessary theoretical foundation for the area of MDM and SOA. This could both be achieved through literature studies but also by meeting with consultancy firms to understand how this is solved in the industry. And with the limited time for executing this project, its preferred that we also start to identify where the master data resides and which business processes actually accesses the master data. Furthermore, to understand how the master data differs between the business units we will need to identify their respective information models; focusing primarily on project data. By doing this we hope to understand how the master data is altered and how their information models (or master data definition) differs.
+
+
+\subsection{Future state analysis}
+
+Based on what we learned from the previous phases we will look at some different target architectures and analyse them with respect to areas of consideration (e.g., data accuracy, consistency, timeliness, synchronization, quality, security etc). The biggest challenge during this stage will be to compare the different information models and decide on which  how an improved model could look like. 
+
+%\subsection{Implementation roadmap}
+%Based on the analysis provided from the future state architecture analysis we will provide a roadmap of the necessary actions that needed in order to realise the chosen future state architecture. Moreover, providing master data only do not guarantee that good data quality is maintained; instead looking at the governance processes will also be a increasingly important factor both in terms of data governance and SOA governance.
+
+\begin{footnotesize}
+\bibliographystyle{plain}
+\bibliography{string,itu,rfc,i-d}
+\end{footnotesize}
+
+\end{document}
+
+
